@@ -15,7 +15,7 @@ object AppModule {
 
 
     @Provides
-    fun provideBaseUrl(): String = "https://api.coinpaprika.com/v1"
+    fun provideBaseUrl(): String = "https://api.coinpaprika.com/v1/"
 
     @Provides
     @Singleton
