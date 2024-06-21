@@ -1,4 +1,4 @@
-package com.example.builtbypixeltest
+package com.example.builtbypixeltest.di
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

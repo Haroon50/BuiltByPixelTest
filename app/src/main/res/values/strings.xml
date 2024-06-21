@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">BuiltByPixelTest</string>
+    <string name="token">Token</string>
+    <string name="coin">Coin</string>
+
 </resources>

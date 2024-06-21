@@ -1,4 +1,4 @@
-package com.example.builtbypixeltest
+package com.example.builtbypixeltest.di
 
 import com.example.builtbypixeltest.data.CoinApiService
 import dagger.Module
