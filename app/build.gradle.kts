@@ -68,47 +68,26 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-
-    implementation("androidx.activity:activity-compose:1.3.0-alpha07")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0")
-
-    implementation ("com.squareup.retrofit2:retrofit:2.11.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.11.0")
 
+    implementation(libs.navigation.compose)
+    implementation(libs.kotlinx.serialization.json)
+    implementation("io.coil-kt:coil-compose:2.6.0")
+    implementation("androidx.compose:compose-bom:2024.05.00")
+    androidTestImplementation("androidx.compose:compose-bom:2024.05.00")
 
+    implementation("androidx.compose.material3:material3")
+    debugImplementation("androidx.compose.ui:ui-tooling")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.1")
+
+    // Dependency Injection
     implementation("com.google.dagger:hilt-android:2.48")
     kapt("com.google.dagger:hilt-android-compiler:2.48")
     implementation ("com.google.code.gson:gson:2.8.2")
 
-    implementation(libs.navigation.compose)
-    implementation(libs.kotlinx.serialization.json)
-
-    implementation("io.coil-kt:coil-compose:2.6.0")
-
-
-
-    val composeBom = platform("androidx.compose:compose-bom:2024.05.00")
-    implementation(composeBom)
-    androidTestImplementation(composeBom)
-
-    implementation("androidx.compose.material3:material3")
-
-    implementation("androidx.compose.ui:ui-tooling-preview")
-    debugImplementation("androidx.compose.ui:ui-tooling")
-
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
-    debugImplementation("androidx.compose.ui:ui-test-manifest")
-
-
-    // Add these dependencies for testing
-    testImplementation("junit:junit:4.13.2")
-    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.1")
+    //Unit Testing
     testImplementation("org.mockito:mockito-core:3.11.2")
-    testImplementation("org.mockito.kotlin:mockito-kotlin:3.2.0")
-    testImplementation("androidx.arch.core:core-testing:2.1.0")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:1.5.21")
     testImplementation("org.mockito:mockito-inline:2.13.0")
-    testImplementation("androidx.arch.core:core-testing:2.1.0")
+
 
 }
