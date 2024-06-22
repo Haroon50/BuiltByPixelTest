@@ -4,6 +4,10 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
+import androidx.compose.animation.AnimatedContentTransitionScope
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -71,6 +75,10 @@ class MainActivity : ComponentActivity() {
         val navController = rememberNavController()
         NavHost(
             navController = navController,
+            enterTransition = { fadeIn(animationSpec = tween(1000)) + slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Left, tween(1000))},
+            exitTransition = { fadeOut(animationSpec = tween(1000)) + slideOutOfContainer(AnimatedContentTransitionScope.SlideDirection.Left, tween(1000))},
+            popEnterTransition = { fadeIn(animationSpec = tween(1000)) + slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Right, tween(1000))},
+            popExitTransition = { fadeOut(animationSpec = tween(1000)) + slideOutOfContainer(AnimatedContentTransitionScope.SlideDirection.Right, tween(1000))},
             startDestination = HomeScreenNavigation
         ) {
             composable<HomeScreenNavigation> {
@@ -80,6 +88,7 @@ class MainActivity : ComponentActivity() {
                         .background(Color.White)
                 ) {
                     LazyColumn(Modifier.weight(1f)) {
+
                         items(coins.size) {
                             CoinItem(coin = coins[it], navController)
                             HorizontalDivider()

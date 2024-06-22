@@ -45,6 +45,11 @@ android {
         kotlinCompilerExtensionVersion = "1.5.0"
     }
 
+    testOptions {
+        unitTests.isReturnDefaultValues = true
+    }
+
+
 }
 
 kapt {
@@ -96,5 +101,14 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
 
+    // Add these dependencies for testing
+    testImplementation("junit:junit:4.13.2")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.1")
+    testImplementation("org.mockito:mockito-core:3.11.2")
+    testImplementation("org.mockito.kotlin:mockito-kotlin:3.2.0")
+    testImplementation("androidx.arch.core:core-testing:2.1.0")
+    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:1.5.21")
+    testImplementation("org.mockito:mockito-inline:2.13.0")
+    testImplementation("androidx.arch.core:core-testing:2.1.0")
 
 }
