@@ -48,8 +48,6 @@ android {
     testOptions {
         unitTests.isReturnDefaultValues = true
     }
-
-
 }
 
 kapt {
@@ -75,6 +73,7 @@ dependencies {
     implementation("io.coil-kt:coil-compose:2.6.0")
     implementation("androidx.compose:compose-bom:2024.05.00")
     androidTestImplementation("androidx.compose:compose-bom:2024.05.00")
+    implementation("androidx.compose.material3:material3:1.2.1")
 
     implementation("androidx.compose.material3:material3")
     debugImplementation("androidx.compose.ui:ui-tooling")
