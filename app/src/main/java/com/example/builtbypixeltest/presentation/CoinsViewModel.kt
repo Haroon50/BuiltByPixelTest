@@ -25,7 +25,6 @@ class CoinsViewModel @Inject constructor(
 
     fun fetchCoinData() {
         viewModelScope.launch {
-            _data.value = GenericResult.Loading
             val result = coinRepository.getAllCoinsData()
             _data.value = result
         }

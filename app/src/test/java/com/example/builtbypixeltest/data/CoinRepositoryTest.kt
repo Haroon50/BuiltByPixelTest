@@ -29,9 +29,8 @@ class CoinRepositoryTest {
             CoinResponse("2", "AlphaCoin", "symbol",  1, true, is_active = true, type = "type")
         )
 
-        `when`(apiService.fetchAllCoinsData()).thenReturn(expected)
-
         // When
+        `when`(apiService.fetchAllCoinsData()).thenReturn(expected)
         val actual = repository.getAllCoinsData()
 
         // Then
